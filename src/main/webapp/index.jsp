@@ -25,7 +25,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!! Demo using SpringMVC</h1>
+        <h1>Hello World!! Demo using SpringMVC and Coherence on WebLogic</h1>
         <h2>To access Hello World using SpringMVC add URI http://ip:port/demo/hello</h2>
         <h2>To access Coherence Demo using SpringMVC add URI http://ip:port/demo/cohwlsdemo</h2>
         <ul>
