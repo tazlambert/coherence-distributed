@@ -1,5 +1,0 @@
-com\demo\coherence\weblogic\springmvc\config\ApplicationContextConfig.class
-com\demo\coherence\weblogic\springmvc\controller\CoherenceController.class
-com\demo\coherence\weblogic\springmvc\config\SpringWebAppInitializer.class
-com\demo\coherence\weblogic\springmvc\config\WebMvcConfig.class
-com\demo\coherence\weblogic\springmvc\controller\HelloWorldController.class
