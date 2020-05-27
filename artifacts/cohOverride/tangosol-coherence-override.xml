@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+
+<coherence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://xmlns.oracle.com/coherence/coherence-operational-config"
+   xsi:schemaLocation="http://xmlns.oracle.com/coherence/coherence-operational-config
+   coherence-operational-config.xsd">
+   <cluster-config>
+      <member-identity>
+         <cluster-name>demoCohCluster</cluster-name>
+      </member-identity>
+      <unicast-listener>
+         <socket-provider system-property="coherence.socketprovider">tcp</socket-provider>
+         <well-known-addresses>
+            <address system-property="coherence.wka">10.0.3.2</address>
+            <address system-property="coherence.wka1">10.0.3.3</address>
+         </well-known-addresses>
+      </unicast-listener>
+      <services>
+         <service id="3">
+            <init-params>
+               <init-param id="4">
+                  <param-name>local-storage</param-name>
+                  <param-value system-property="tangosol.coherence.distributed.
+                     localstorage">false</param-value>
+               </init-param>
+            </init-params>
+         </service>
+      </services>
+   </cluster-config>
+
+   <configurable-cache-factory-config>
+      <init-params>
+         <init-param>
+            <param-type>java.lang.String</param-type>
+            <param-value system-property="coherence.cacheconfig">/tmp/config/cache-config.xml</param-value>
+         </init-param>
+      </init-params>
+   </configurable-cache-factory-config>
+   <license-config>
+      <license-mode system-property="tangosol.coherence.mode">prod</license-mode>
+   </license-config>
+</coherence>
