@@ -1,1 +1,7 @@
+java -server -classpath MyCacheApp/classes:coherence.jar -Dtangosol.coherence.override=tangosol-coherence-override.xml  com.demo.coherence.TestClient
 
+java -server -classpath MyCacheApp/classes:coherence.jar -Dtangosol.coherence.override=tangosol-coherence-override.xml  com.demo.coherence.TestClientAdv
+
+java -server -classpath MyCacheApp/classes:coherence.jar -Dtangosol.coherence.override=tangosol-coherence-override.xml  com.demo.coherence.TestClientAdvFilter
+
+java -server -classpath MyCacheApp/classes:coherence.jar -Dtangosol.coherence.override=tangosol-coherence-override.xml  com.demo.coherence.TestClientInteractive
