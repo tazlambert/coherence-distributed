@@ -22,6 +22,8 @@ In the following steps, you will be setting up a weblogic cluster that spans acr
 - Configure a new WebLogic cluster with 2 managed servers for Coherence cluster that will **store data**
 - Configure a new WebLogic cluster with 2 managed servers for Coherence cluster that will **access data**
 
+## Hands On Lab
+
 ### Step 1: Create Grid Archive for Storing Data Cache
 
 ### Step 2: Create Web Application Archive for WebApp Demo
