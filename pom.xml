@@ -2,11 +2,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.demo.coherence.weblogic</groupId>
-  <artifactId>CohWlsSpringMVC</artifactId>
+  <artifactId>MyWebApp</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
-  <name>Coherence WebLogic SpringMVC Maven Webapp</name>
-  <description>Demo project for Spring Boot Coherence Weblogic</description>
+  <name>Coherence WebLogic SpringMVC Maven WebApp</name>
+  <description>Demo project for Coherence Weblogic using SpringMVC</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -59,18 +59,19 @@
 			<groupId>com.oracle.coherence</groupId>
 			<artifactId>coherence</artifactId>
 			<version>12.2.1-4-0</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
 
 	<build>
-		<finalName>CohWlsSpringMVC</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
+				    <finalName>MyWebApp</finalName>
 					<source>6</source>
 					<target>6</target>
 				</configuration>
