@@ -9,7 +9,7 @@ This guide assumes you have already have Linux client. For optimal experience ru
 First thing to do is to go the directory of the cloned repo:
 ```
 cd
-cd coherence-dsitributed
+cd coherence-distributed
 ls
 ```
 It will shows the base directory to create the application in step 2
