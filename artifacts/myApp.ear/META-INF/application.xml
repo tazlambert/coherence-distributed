@@ -3,7 +3,7 @@
   <display-name></display-name>
   <module>
     <web>
-      <web-uri>myWebApp-1.0.0.war</web-uri>
+      <web-uri>myWebApp.war</web-uri>
       <context-root>demo</context-root>
     </web>
   </module>
