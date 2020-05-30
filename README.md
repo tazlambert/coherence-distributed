@@ -10,7 +10,7 @@ This Hands On Lab main purpose is to show how to implement Coherence caching for
 - Basic understanding on Oracle WebLogic and Linux.
 - Basic understanding in JAVA programming language.
 - Oracle WebLogic that hosted on OCI either by [Lift and Shift](https://github.com/tazlambert/weblogic-lift-shift) or by [Move and Improve](https://github.com/tazlambert/weblogic-move-improve)
-- Access to bastion PC on OCI that based on Linux.
+- Access to client PC that based on Linux.
 
 ## Overview
 
@@ -24,11 +24,48 @@ In the following steps, you will be setting up a weblogic cluster that spans acr
 
 ## Hands On Lab
 
-### Step 1: Create Grid Archive for Storing Data Cache
+### Step 1: Create Grid Archive (.gar) for Storing Data Cache
 
-### Step 2: Create Web Application Archive for WebApp Demo
+First thing to do is clone this repo to the client PC
+```
+cd
+git clone https://github.com/tazlambert/coherence-distributed.git
+cd coherence-dsitributed
+ls
+```
+It will shows the base directory to create the application in step 2
+```
+[opc@bastion1 coherence-distributed]$ ls -al
+total 20
+drwxrwxr-x.  5 opc opc   93 May 30 07:49 .
+drwx------. 30 opc opc 4096 May 30 07:49 ..
+drwxrwxr-x.  6 opc opc   77 May 30 07:49 artifacts
+drwxrwxr-x.  8 opc opc 4096 May 30 07:49 .git
+-rw-rw-r--.  1 opc opc 1211 May 30 07:49 LICENSE
+-rw-rw-r--.  1 opc opc 2449 May 30 07:49 pom.xml
+-rw-rw-r--.  1 opc opc 2604 May 30 07:49 README.md
+drwxrwxr-x.  3 opc opc   18 May 30 07:49 src
+```
+To create .gar we need to go to artifacts directory
+```
+cd artifacts
+ls
+```
+It will shows the directory that will be used during this labs
+```
+[opc@bastion1 artifacts]$ ls -al
+total 0
+drwxrwxr-x. 6 opc opc 77 May 30 07:49 .
+drwxrwxr-x. 5 opc opc 93 May 30 07:49 ..
+drwxrwxr-x. 2 opc opc 69 May 30 07:49 cohOverride
+drwxrwxr-x. 3 opc opc 40 May 30 07:49 javaCode
+drwxrwxr-x. 3 opc opc 22 May 30 07:49 myApp.ear
+drwxrwxr-x. 3 opc opc 22 May 30 07:49 myCache.gar
+```
 
-### Step 3: Create Enterprise Application Archive to Enable WebApp Demo Access Data Cache
+### Step 2: Create Web Application Archive (.war) for WebApp Demo
+
+### Step 3: Create Enterprise Application Archive (.ear) to Enable WebApp Demo Access Data Cache
 
 ### Step 4: Configure WebLogic-Coherence Cluster to Store Data Cache
 
