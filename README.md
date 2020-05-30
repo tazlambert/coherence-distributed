@@ -28,7 +28,7 @@ In the following steps, you will be setting up a weblogic cluster that spans acr
 
 ### [Step 2: Create Web Application Archive (.war) for WebApp Demo](tutorial/create.war.md)
 
-### Step 3: Create Enterprise Application Archive (.ear) to Enable WebApp Demo Access Data Cache
+### [Step 3: Create Enterprise Application Archive (.ear) to Enable WebApp Demo Access Data Cache](tutorial/create.ear.md)
 
 ### Step 4: Configure WebLogic-Coherence Cluster to Store Data Cache
 
