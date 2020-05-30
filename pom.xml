@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.demo.coherence.weblogic</groupId>
-  <artifactId>MyWebApp</artifactId>
+  <artifactId>myWebApp</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
   <name>Coherence WebLogic SpringMVC Maven WebApp</name>
@@ -71,7 +71,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-				    <finalName>MyWebApp</finalName>
+				    <finalName>myWebApp</finalName>
 					<source>6</source>
 					<target>6</target>
 				</configuration>
