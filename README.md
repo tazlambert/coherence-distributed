@@ -16,10 +16,26 @@ This Hands On Lab main purpose is to show how to implement Coherence caching for
 
 In the following steps, you will be setting up a weblogic cluster that spans across two OCI Compute. The steps you will be performing includes:
 
-- Create Grid Archive for storing data 
+- Create Grid Archive for storing data cache
 - Create Web Application Archive for WebApp demo
 - Create Enterprise Application Archive that consists; Grid Archive and Web Application Archive  
-- Configure a new clustered WebLogic Domain with 2 managed servers for Coherence cluster that will **store data**
-- Configure a new clustered WebLogic Domain with 2 managed servers for Coherence cluster that will **access data**
-- Testing
+- Configure a new WebLogic cluster with 2 managed servers for Coherence cluster that will **store data**
+- Configure a new WebLogic cluster with 2 managed servers for Coherence cluster that will **access data**
 
+### Step 1: Create Grid Archive for Storing Data Cache
+
+### Step 2: Create Web Application Archive for WebApp Demo
+
+### Step 3: Create Enterprise Application Archive to Enable WebApp Demo Access Data Cache
+
+### Step 4: Configure WebLogic-Coherence Cluster to Store Data Cache
+
+### Step 5: Configure WebLogic-Coherence Cluster to Access Data Cache
+
+## References
+
+1. [Oracle Coherence 12.2.1.4 Docuemntation](https://docs.oracle.com/en/middleware/fusion-middleware/coherence/12.2.1.4/index.html)
+2. [Develop Coherence Application on Oracle WebLogic](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlcoh/index.html)
+3. [Oracle Coherence](https://www.oracle.com/pls/topic/lookup?ctx=en/middleware/fusion-middleware/coherence/12.2.1.4&id=COHDG4979)
+4. [Oracle Coherence Clusters](https://www.oracle.com/pls/topic/lookup?ctx=en/middleware/fusion-middleware/coherence/12.2.1.4&id=COHDG5163)
+5. [Oracle Coherence Caches](https://www.oracle.com/pls/topic/lookup?ctx=en/middleware/fusion-middleware/coherence/12.2.1.4&id=COHDG5049)
