@@ -10,7 +10,7 @@ First thing to do is clone this repo to the client PC
 ```
 cd
 git clone https://github.com/tazlambert/coherence-distributed.git
-cd coherence-dsitributed
+cd coherence-distributed
 ls
 ```
 It will shows the base directory to create the application in step 2
