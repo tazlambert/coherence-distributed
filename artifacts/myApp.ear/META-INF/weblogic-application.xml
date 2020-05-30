@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<weblogic-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-application
+   http://xmlns.oracle.com/weblogic/weblogic-application/1.6/
+   weblogic-application.xsd"
+   xmlns="http://xmlns.oracle.com/weblogic/weblogic-application">
+   <module>
+      <name>myCache</name>
+      <type>GAR</type>
+      <path>myCache.gar</path>
+   </module>
+</weblogic-application>
