@@ -37,6 +37,7 @@ It will shows the directory that will be used during this labs
 total 0
 drwxrwxr-x. 6 opc opc 77 May 30 07:49 .
 drwxrwxr-x. 5 opc opc 93 May 30 07:49 ..
+-rw-rw-r--. 1 opc opc 13505055 May 30 14:11 coherence.jar
 drwxrwxr-x. 2 opc opc 69 May 30 07:49 cohOverride
 drwxrwxr-x. 3 opc opc 40 May 30 07:49 javaCode
 drwxrwxr-x. 3 opc opc 22 May 30 07:49 myApp.ear
