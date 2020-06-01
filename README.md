@@ -39,17 +39,19 @@ In Coherence there are several type of cache that we can use;
 
 ## Hands On Lab
 
-### [Step 1: Create Grid Archive (.gar) for Storing Data Cache](tutorial/create.gar.md)
+### [Step 1: Create Grid Archive (.gar) for Storing Data Cache](tutorial/create.data.gar.md)
 
-### [Step 2: Create Web Application Archive (.war) for WebApp Demo](tutorial/create.war.md)
+### [Step 2: Create Grid Archive (.gar) for Storing Data Cache](tutorial/create.data.gar.md)
 
-### [Step 3: Create Enterprise Application Archive (.ear) to Enable WebApp Demo Access Data Cache](tutorial/create.ear.md)
+### [Step 3: Create Web Application Archive (.war) for WebApp Demo](tutorial/create.war.md)
 
-### Step 4: Configure WebLogic-Coherence Cluster to Store Data Cache
+### [Step 4: Create Enterprise Application Archive (.ear) to Enable WebApp Demo Access Data Cache](tutorial/create.ear.md)
 
-### Step 5: Configure WebLogic-Coherence Cluster to Access Data Cache
+### [Step 5: Configure WebLogic-Coherence Cluster to Store Data Cache]()
 
-### Step 6: Accessing Data Cache from Outside WebLogic-Coherence Cluster
+### [Step 6: Configure WebLogic-Coherence Cluster to Access Data Cache]()
+
+### [Step 7: Accessing Data Cache from Outside WebLogic-Coherence Cluster]()
 
 ## References
 
