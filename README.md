@@ -1,4 +1,4 @@
-# Welcome to Oracle Coherence Distributed Hands On Lab
+# Welcome to Oracle Coherence WebLogic Hands On Lab
 
 ## About this hands-on Hands On Lab ##
 
@@ -21,6 +21,21 @@ In the following steps, you will be setting up a weblogic cluster that spans acr
 - Create Enterprise Application Archive that consists; Grid Archive and Web Application Archive  
 - Configure a new WebLogic cluster with 2 managed servers for Coherence cluster that will **store data**
 - Configure a new WebLogic cluster with 2 managed servers for Coherence cluster that will **access data**
+
+## Coherence Introduction 
+
+In Coherence there are several type of cache that we can use;
+
+- Distributed Cache – A distributed, or partitioned, cache is a clustered, fault-tolerant cache that has linear scalability. Suitable for read write operations.
+- Replicated Cache – A replicated cache is a clustered, fault tolerant cache where data is fully replicated to every member in the cluster. Suitable for small and heavy read operations.
+- Federated Cache - A federated cached data is federated across clusters to provide redundancy, off-site backup, and multiple points of access for application users in different geographical locations.
+- Optimistic Cache - An optimistic cache is a clustered cache implementation similar to the replicated cache implementation but without any concurrency control.
+- Near Cache - A near cache is a hybrid cache; it typically fronts a distributed cache or a remote cache with a local cache.
+- View Cache - A view cache is a clustered, fault tolerant cache that provides a local in-memory materialized view of data stored in a distributed and partitioned cache.
+- Local Cache - While it is not a clustered service, the local cache implementation is often used in combination with various clustered cache services as part of a near cache.
+- Remote Cache - A remote cache describes any out-of-process cache accessed by a Coherence*Extend client.
+
+**For this labs we are going to focus on the first 3 type of caches: Distributed, Replicated, and Federated.**
 
 ## Hands On Lab
 
