@@ -63,7 +63,9 @@ The content of coherence-application.xml will be like below:
    </cache-configuration-ref>
 </coherence-application>
 ```
-The file above is the first file that will be picked up by coherence and it will read cache config that is named coherence-cache-config.xml, which the content is:
+The file above is the first file that will be picked up by coherence and it will read cache config that is named coherence-cache-config.xml, since we are focusing on 3 type of caches:
+
+### Distributed Cache
 ```
 <?xml version="1.0"?>
 <cache-config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='http://xmlns.oracle.com/coherence/coherence-cache-config' xsi:schemaLocation='http://xmlns.oracle.com/coherence/coherence-cache-config coherence-cache-config.xsd'>
@@ -93,7 +95,77 @@ Above file is the configuration file that define the cache to store data, below 
 |-|-|-|
 |cache-name|datacache|the name of the cache|
 |scheme-name|datacachescheme|the name of the cache confugration|
-|service-name|DistributedCache|the mechanism on how data being stored, can be; replicated, distributed, federated|
+|service-name|DistributedCache|the type of data cache|
+
+### Replicated Cache
+```
+<?xml version="1.0"?>
+<cache-config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='http://xmlns.oracle.com/coherence/coherence-cache-config' xsi:schemaLocation='http://xmlns.oracle.com/coherence/coherence-cache-config coherence-cache-config.xsd'>
+   <scope-name>datacache</scope-name>
+
+   <caching-scheme-mapping>
+      <cache-mapping>
+         <cache-name>datacache</cache-name>
+         <scheme-name>datacachescheme</scheme-name>
+      </cache-mapping>
+   </caching-scheme-mapping>
+
+   <caching-schemes>
+      <replicated-scheme>
+         <scheme-name>datacachescheme</scheme-name>
+         <service-name>ReplicatedCache</service-name>
+         <backing-map-scheme>
+            <local-scheme/>
+         </backing-map-scheme>
+         <autostart>true</autostart>
+      </replicated-scheme>
+   </caching-schemes>
+</cache-config>
+```
+Above file is the configuration file that define the cache to store data, below is the explanation
+| Key | Value | Descrption |
+|-|-|-|
+|cache-name|datacache|the name of the cache|
+|scheme-name|datacachescheme|the name of the cache confugration|
+|service-name|ReplicatedCache|the type of data cache|
+
+### Federated Cache
+```
+<?xml version="1.0"?>
+<cache-config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='http://xmlns.oracle.com/coherence/coherence-cache-config' xsi:schemaLocation='http://xmlns.oracle.com/coherence/coherence-cache-config coherence-cache-config.xsd'>
+   <scope-name>datacache</scope-name>
+
+   <caching-scheme-mapping>
+      <cache-mapping>
+         <cache-name>datacache</cache-name>
+         <scheme-name>datacachescheme</scheme-name>
+      </cache-mapping>
+   </caching-scheme-mapping>
+
+   <caching-schemes>
+      <federated-scheme>
+         <scheme-name>datacachescheme</scheme-name>
+         <service-name>FederatedCache</service-name>
+         <backing-map-scheme>
+            <local-scheme/>
+         </backing-map-scheme>
+         <autostart>true</autostart>
+		 <topologies>
+			<topology>
+				<name>MyTopology</name>
+			</topology>
+		 </topologies>
+      </federated-scheme>
+   </caching-schemes>
+</cache-config>
+```
+Above file is the configuration file that define the cache to store data, below is the explanation
+| Key | Value | Descrption |
+|-|-|-|
+|cache-name|datacache|the name of the cache|
+|scheme-name|datacachescheme|the name of the cache confugration|
+|service-name|FederatedCache|the type of data cache|
+|topology<br>name |MyTopology|the name of topology for federated cluster|
 
 After that we can package the directory into .gar file:
 ```
