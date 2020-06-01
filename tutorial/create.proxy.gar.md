@@ -6,46 +6,11 @@ This guide assumes you have already have Linux client. For optimal experience ru
 
 ## Hands on Lab
 
-First thing to do is clone this repo to the client PC
+This .gar will be deployed to separated MS but inside the Coherence cluster, and it have the function as proxy to access Coherence cluster data from application that is not joining Coherence Cluster.
+
+First thing to do is to create directory named myProxyCache.gar and META-INF dir inside. Also create 2 empty files named coherence-application.xml and coherence-cache-config.xml. Now we go to directory myCache.gar and make sure the directory structure like this:
 ```
-cd
-git clone https://github.com/tazlambert/coherence-distributed.git
-cd coherence-distributed
-ls
-```
-It will shows the base directory to create the application in step 2
-```
-[opc@bastion1 coherence-distributed]$ ls -al
-total 20
-drwxrwxr-x.  5 opc opc   93 May 30 07:49 .
-drwx------. 30 opc opc 4096 May 30 07:49 ..
-drwxrwxr-x.  6 opc opc   77 May 30 07:49 artifacts
-drwxrwxr-x.  8 opc opc 4096 May 30 07:49 .git
--rw-rw-r--.  1 opc opc 1211 May 30 07:49 LICENSE
--rw-rw-r--.  1 opc opc 2449 May 30 07:49 pom.xml
--rw-rw-r--.  1 opc opc 2604 May 30 07:49 README.md
-drwxrwxr-x.  3 opc opc   18 May 30 07:49 src
-```
-To create .gar we need to go to artifacts directory
-```
-cd artifacts
-ls
-```
-It will shows the directory that will be used during this labs
-```
-[opc@bastion1 artifacts]$ ls -al
-total 0
-drwxrwxr-x. 6 opc opc 77 May 30 07:49 .
-drwxrwxr-x. 5 opc opc 93 May 30 07:49 ..
--rw-rw-r--. 1 opc opc 13505055 May 30 14:11 coherence.jar
-drwxrwxr-x. 2 opc opc 69 May 30 07:49 cohOverride
-drwxrwxr-x. 3 opc opc 40 May 30 07:49 javaCode
-drwxrwxr-x. 3 opc opc 22 May 30 07:49 myApp.ear
-drwxrwxr-x. 3 opc opc 22 May 30 07:49 myCache.gar
-```
-Now we go to directory myCache.gar and make sure the directory structure like this:
-```
-[opc@bastion1 artifacts]$ tree myCache.gar
+[opc@bastion1 artifacts]$ tree myProxyCache.gar
 myCache.gar
 └── META-INF
     ├── coherence-application.xml
@@ -109,6 +74,8 @@ Above file is the configuration file that define the cache to store data, below 
 |cache-name|datacache|the name of the cache|
 |scheme-name|datacachescheme|the name of the cache confugration|
 |service-name|DistributedCache|the type of data cache|
+|local-address<br>address|localhost|the IP that will be access by client outside cluster|
+|local-address<br>port|1111|the port that will be access by client outside cluster|
 
 ### Replicated Cache
 ```
@@ -154,6 +121,8 @@ Above file is the configuration file that define the cache to store data, below 
 |cache-name|datacache|the name of the cache|
 |scheme-name|datacachescheme|the name of the cache confugration|
 |service-name|ReplicatedCache|the type of data cache|
+|local-address<br>address|localhost|the IP that will be access by client outside cluster|
+|local-address<br>port|1111|the port that will be access by client outside cluster|
 
 ### Federated Cache
 ```
@@ -176,11 +145,11 @@ Above file is the configuration file that define the cache to store data, below 
             <local-scheme/>
          </backing-map-scheme>
          <autostart>true</autostart>
-		     <topologies>
-			     <topology>
-				     <name>MyTopology</name>
-			     </topology>
-		     </topologies>
+         <topologies>
+	    <topology>
+	       <name>MyTopology</name>
+	    </topology>
+	 </topologies>
       </federated-scheme>
       <proxy-scheme>	  
          <service-name>ExtendTcpProxyService</service-name>
@@ -205,11 +174,13 @@ Above file is the configuration file that define the cache to store data, below 
 |scheme-name|datacachescheme|the name of the cache confugration|
 |service-name|FederatedCache|the type of data cache|
 |topology<br>name |MyTopology|the name of topology for federated cluster|
+|local-address<br>address|localhost|the IP that will be access by client outside cluster|
+|local-address<br>port|1111|the port that will be access by client outside cluster|
 
 After that we can package the directory into .gar file:
 ```
-cd myCache.gar
-jar cvf myCache.gar *
+cd myProxyCache.gar
+jar cvf myProxyCache.gar *
 ```
 The expected result will be
 ```
@@ -220,13 +191,13 @@ adding: META-INF/coherence-cache-config.xml(in = 1478) (out= 435)(deflated 70%)
 ```
 A new file is created inside the directory that will be deployed later:
 ```
-[opc@bastion1 artifacts]$ tree myCache.gar
-myCache.gar
+[opc@bastion1 artifacts]$ tree myProxyCache.gar
+myProxyCache.gar
 ├── META-INF
 │   ├── coherence-application.xml
 │   └── coherence-cache-config.xml
-└── myCache.gar
+└── myProxyCache.gar
 
 1 directory, 3 files
 ```
-For now keep files myCache.gar
+For now keep files myProxyCache.gar
