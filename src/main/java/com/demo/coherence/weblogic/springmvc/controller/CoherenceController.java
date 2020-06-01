@@ -28,7 +28,7 @@ public class CoherenceController {
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
 
         Hashtable<String, Object> cacheToGet = (Hashtable<String, Object>) CacheFactory.getCache(cacheName).get(cacheToPutKey);
-        if (cacheToGet.size()>0)
+        if (cacheToGet != null)
         {
             System.out.println("Get object from existing cache");
             message.append("Get object from existing cache");
@@ -59,7 +59,7 @@ public class CoherenceController {
             message.append("<br>");
             CacheFactory.getCache(cacheName).put(cacheToPutKey, cacheToPut);
             System.out.println("Put initiate object succeed");
-            message.append("Put update object succeed");
+            message.append("Put initiate object succeed");
             message.append("<br>");
         }
 
