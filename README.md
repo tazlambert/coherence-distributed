@@ -47,9 +47,9 @@ In Coherence there are several type of cache that we can use;
 
 ### [Step 4: Create Enterprise Application Archive (.ear) to Enable WebApp Demo Access Data Cache](tutorial/create.ear.md)
 
-### [Step 5: Configure WebLogic-Coherence Cluster to Store Data Cache]()
+### [Step 5: Configure WebLogic-Coherence Cluster for Distributed or Replicated](tutorial/create.wls.data.cache.md)
 
-### [Step 6: Configure WebLogic-Coherence Cluster to Access Data Cache]()
+### [Step 6: Configure WebLogic-Coherence Cluster for Federated Cache]()
 
 ### [Step 7: Accessing Data Cache from Outside WebLogic-Coherence Cluster]()
 
