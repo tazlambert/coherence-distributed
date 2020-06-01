@@ -49,6 +49,8 @@ In Coherence there are several type of cache that we can use;
 
 ### Step 5: Configure WebLogic-Coherence Cluster to Access Data Cache
 
+### Step 6: Accessing Data Cache from Outside WebLogic-Coherence Cluster
+
 ## References
 
 1. [Oracle Coherence 12.2.1.4 Docuemntation](https://docs.oracle.com/en/middleware/fusion-middleware/coherence/12.2.1.4/index.html)
