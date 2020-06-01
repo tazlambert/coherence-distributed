@@ -53,7 +53,7 @@ In Coherence there are several type of cache that we can use;
 
 ## References
 
-1. [Oracle Coherence 12.2.1.4 Docuemntation](https://docs.oracle.com/en/middleware/fusion-middleware/coherence/12.2.1.4/index.html)
+1. [Oracle Coherence 12.2.1.4 Documentation](https://docs.oracle.com/en/middleware/fusion-middleware/coherence/12.2.1.4/index.html)
 2. [Develop Coherence Application on Oracle WebLogic](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlcoh/index.html)
 3. [Oracle Coherence](https://www.oracle.com/pls/topic/lookup?ctx=en/middleware/fusion-middleware/coherence/12.2.1.4&id=COHDG4979)
 4. [Oracle Coherence Clusters](https://www.oracle.com/pls/topic/lookup?ctx=en/middleware/fusion-middleware/coherence/12.2.1.4&id=COHDG5163)
