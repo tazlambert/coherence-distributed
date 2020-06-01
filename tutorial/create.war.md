@@ -33,7 +33,17 @@ Now we can install coherence lib,which located in artifacts dir, into the maven 
 ```
 mvn install:install-file -DgroupId=com.oracle.coherence -DartifactId=coherence -Dversion=12.2.1-4-0 -Dfile=artifacts/coherence.jar -Dpackaging=jar -DgeneratePom=true
 ```
-Then we can create .war by using these 2 commands:
+We need to take a look at pmo.xml in this repo, one part related about dependency to cherence is like below:
+```
+		<!-- Coherence dependencies -->
+		<dependency>
+			<groupId>com.oracle.coherence</groupId>
+			<artifactId>coherence</artifactId>
+			<version>12.2.1-4-0</version>
+			<scope>provided</scope>
+		</dependency>
+```
+With this we will build .war but no coherence.jar will be included in the .war file. Then we can create .war by using these 2 commands:
 ```
 mvn clean install
 mvn clean package
