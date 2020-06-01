@@ -41,7 +41,7 @@ In Coherence there are several type of cache that we can use;
 
 ### [Step 1: Create Grid Archive (.gar) for Storing Data Cache](tutorial/create.data.gar.md)
 
-### [Step 2: Create Grid Archive (.gar) for Proxying Data Cache](tutorial/create.data.gar.md)
+### [Step 2: Create Grid Archive (.gar) for Proxying Data Cache](tutorial/create.proxy.gar.md)
 
 ### [Step 3: Create Web Application Archive (.war) for WebApp Demo](tutorial/create.war.md)
 
