@@ -150,11 +150,11 @@ Above file is the configuration file that define the cache to store data, below 
             <local-scheme/>
          </backing-map-scheme>
          <autostart>true</autostart>
-		 <topologies>
-			<topology>
-				<name>MyTopology</name>
-			</topology>
-		 </topologies>
+         <topologies>
+	    <topology>
+	      <name>MyTopology</name>
+	    </topology>
+	 </topologies>
       </federated-scheme>
    </caching-schemes>
 </cache-config>
