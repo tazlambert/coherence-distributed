@@ -9,7 +9,7 @@ This guide assumes you have already have installed clustered WebLogic domain 12.
 We will continue the lab using previous setup for deployment and cluster setup for WebLogic and Coherence. We need to delete the existing deployment first, but make sure all managed server are shutdown first
 
 ![alt text](images/CohFed01.jpg)
-![alt text](images/CohFed01.jpg)
+![alt text](images/CohFed02.jpg)
 
 After delteing the deployment files we need to re-create the .ear and .gar files, this is because the cache configuration must be changed from distributed/replicated to federated cache. If you clone the gir repo from this Hands on Lab then go to directory artifacts.
 ```
@@ -45,5 +45,18 @@ jar cvf myFedCacheProxy.gar *
 
 ### Setting Up the WebLogic
 
-For the federated cache labs we need to create another Coherence cluster, WebLogic cluster, as if these cluster are hosted in the different environment, since the purpose of federated the Coherence is to create setup for DC-DRC or separated geographically cluster. In this case the new created cluster will be deployed with [.gar for Proxy cache]() So now we need to create 2 new managed server first.
+For the federated cache labs we need to create another Coherence cluster, WebLogic cluster, as if these cluster are hosted in the different environment, since the purpose of federated the Coherence is to create setup for DC-DRC or separated geographically cluster. In this case the new created cluster will be deployed with [.gar for Proxy cache](https://github.com/tazlambert/coherence-weblogic/blob/master/tutorial/create.wls.fed.cache.md#create-gar-file-for-proxy-cache) so that we can do federated testing by accessing data cache from original Coherence cluster (demoCohCluster) using java code. So now we need to create 2 new managed server first that are member of cluster2.
 
+![alt text](images/CohFed03.jpg)
+
+Next we need to create new Coherence cluster named demoCohCluster2, we need to use different port for Unicast;
+
+![alt text](images/CohFed04.jpg)
+
+Make sure the member of the Coherence cluster are correct:
+
+![alt text](images/CohFed05.jpg)
+
+So now we have to different Coherence cluster and if we use cache scheme Replicated or Distributed it is not possible to share the data between those two Coherence cluster:
+
+![alt text](images/CohFed06.jpg)
