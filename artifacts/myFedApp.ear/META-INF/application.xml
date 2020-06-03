@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <display-name></display-name>
+  <module>
+    <web>
+      <web-uri>myWebApp.war</web-uri>
+      <context-root>demo</context-root>
+    </web>
+  </module>
+</application>
