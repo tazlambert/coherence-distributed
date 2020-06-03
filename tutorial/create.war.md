@@ -14,16 +14,15 @@ ls
 ```
 It will shows the base directory to create the application in step 2
 ```
-[opc@bastion1 coherence-distributed]$ ls -al
-total 20
-drwxrwxr-x.  5 opc opc   93 May 30 07:49 .
-drwx------. 30 opc opc 4096 May 30 07:49 ..
-drwxrwxr-x.  6 opc opc   77 May 30 07:49 artifacts
-drwxrwxr-x.  8 opc opc 4096 May 30 07:49 .git
--rw-rw-r--.  1 opc opc 1211 May 30 07:49 LICENSE
--rw-rw-r--.  1 opc opc 2449 May 30 07:49 pom.xml
--rw-rw-r--.  1 opc opc 2604 May 30 07:49 README.md
-drwxrwxr-x.  3 opc opc   18 May 30 07:49 src
+drwxrwxr-x. 6 opc opc 4096 Jun  3 07:45 .
+drwx------. 7 opc opc 4096 Jun  3 07:44 ..
+drwxrwxr-x. 9 opc opc 4096 Jun  3 07:45 artifacts
+drwxrwxr-x. 8 opc opc 4096 Jun  3 07:45 .git
+-rw-rw-r--. 1 opc opc 1211 Jun  3 07:45 LICENSE
+-rw-rw-r--. 1 opc opc 2449 Jun  3 07:45 pom.xml
+-rw-rw-r--. 1 opc opc 4370 Jun  3 07:45 README.md
+drwxrwxr-x. 3 opc opc   18 Jun  3 07:45 src
+drwxrwxr-x. 3 opc opc 4096 Jun  3 07:45 tutorial
 ```
 To create .war we need to have maven command first and install coherence in the local maven repository
 ```
