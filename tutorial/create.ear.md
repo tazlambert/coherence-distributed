@@ -14,15 +14,16 @@ ls
 ```
 It will shows the directory artifacts:
 ```
-[opc@bastion1 artifacts]$ ls -al
-total 0
-drwxrwxr-x. 6 opc opc 77 May 30 07:49 .
-drwxrwxr-x. 5 opc opc 93 May 30 07:49 ..
--rw-rw-r--. 1 opc opc 13505055 May 30 14:11 coherence.jar
-drwxrwxr-x. 2 opc opc 69 May 30 07:49 cohOverride
-drwxrwxr-x. 3 opc opc 40 May 30 07:49 javaCode
-drwxrwxr-x. 3 opc opc 22 May 30 07:49 myApp.ear
-drwxrwxr-x. 3 opc opc 22 May 30 07:49 myCache.gar
+drwxrwxr-x. 9 opc opc     4096 Jun  3 07:45 .
+drwxrwxr-x. 6 opc opc     4096 Jun  3 07:45 ..
+-rw-rw-r--. 1 opc opc 13505055 Jun  3 07:45 coherence.jar
+drwxrwxr-x. 2 opc opc       69 Jun  3 07:45 cohOverride
+drwxrwxr-x. 3 opc opc       40 Jun  3 07:45 javaCode
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myApp.ear
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myCache.gar
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedApp.ear
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedCache.gar
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedCacheProxy.gar
 ```
 To create .ear we need to go inside myApp.ear directory and copy previous .gar and .ear files into it.
 ```
