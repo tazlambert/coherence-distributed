@@ -49,9 +49,7 @@ In Coherence there are several type of cache that we can use;
 
 ### [Step 5: Configure WebLogic-Coherence Cluster for Distributed or Replicated](tutorial/create.wls.data.cache.md)
 
-### [Step 6: Configure WebLogic-Coherence Cluster for Federated Cache]()
-
-### [Step 7: Accessing Data Cache from Outside WebLogic-Coherence Cluster]()
+### [Step 6: Configure WebLogic-Coherence Cluster for Federated Cache](tutorial/create.wls.fed.cache.md)
 
 ## References
 
