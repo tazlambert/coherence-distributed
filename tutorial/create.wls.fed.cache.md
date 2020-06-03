@@ -60,3 +60,9 @@ Make sure the member of the Coherence cluster are correct:
 So now we have to different Coherence cluster and if we use cache scheme Replicated or Distributed it is not possible to share the data between those two Coherence cluster:
 
 ![alt text](images/CohFed06.jpg)
+
+After that we need to deploy all three file that created before: myFedCache.gar, myFedApp.ear, myFedCacheProxy.gar into the respective cluster.
+
+### Setting Up the Coherence federated cluster
+
+After the Coherence cluster already setup then we need to configure the federation part
