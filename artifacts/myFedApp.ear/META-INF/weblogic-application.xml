@@ -5,8 +5,8 @@
    weblogic-application.xsd"
    xmlns="http://xmlns.oracle.com/weblogic/weblogic-application">
    <module>
-      <name>myCache</name>
+      <name>myFedCache</name>
       <type>GAR</type>
-      <path>myCache.gar</path>
+      <path>myFedCache.gar</path>
    </module>
 </weblogic-application>
