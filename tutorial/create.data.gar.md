@@ -15,16 +15,15 @@ ls
 ```
 It will shows the base directory to create the application in step 2
 ```
-[opc@bastion1 coherence-distributed]$ ls -al
-total 20
-drwxrwxr-x.  5 opc opc   93 May 30 07:49 .
-drwx------. 30 opc opc 4096 May 30 07:49 ..
-drwxrwxr-x.  6 opc opc   77 May 30 07:49 artifacts
-drwxrwxr-x.  8 opc opc 4096 May 30 07:49 .git
--rw-rw-r--.  1 opc opc 1211 May 30 07:49 LICENSE
--rw-rw-r--.  1 opc opc 2449 May 30 07:49 pom.xml
--rw-rw-r--.  1 opc opc 2604 May 30 07:49 README.md
-drwxrwxr-x.  3 opc opc   18 May 30 07:49 src
+drwxrwxr-x. 6 opc opc 4096 Jun  3 07:45 .
+drwx------. 7 opc opc 4096 Jun  3 07:44 ..
+drwxrwxr-x. 9 opc opc 4096 Jun  3 07:45 artifacts
+drwxrwxr-x. 8 opc opc 4096 Jun  3 07:45 .git
+-rw-rw-r--. 1 opc opc 1211 Jun  3 07:45 LICENSE
+-rw-rw-r--. 1 opc opc 2449 Jun  3 07:45 pom.xml
+-rw-rw-r--. 1 opc opc 4370 Jun  3 07:45 README.md
+drwxrwxr-x. 3 opc opc   18 Jun  3 07:45 src
+drwxrwxr-x. 3 opc opc 4096 Jun  3 07:45 tutorial
 ```
 To create .gar we need to go to artifacts directory
 ```
@@ -33,15 +32,16 @@ ls
 ```
 It will shows the directory that will be used during this labs
 ```
-[opc@bastion1 artifacts]$ ls -al
-total 0
-drwxrwxr-x. 6 opc opc 77 May 30 07:49 .
-drwxrwxr-x. 5 opc opc 93 May 30 07:49 ..
--rw-rw-r--. 1 opc opc 13505055 May 30 14:11 coherence.jar
-drwxrwxr-x. 2 opc opc 69 May 30 07:49 cohOverride
-drwxrwxr-x. 3 opc opc 40 May 30 07:49 javaCode
-drwxrwxr-x. 3 opc opc 22 May 30 07:49 myApp.ear
-drwxrwxr-x. 3 opc opc 22 May 30 07:49 myCache.gar
+drwxrwxr-x. 9 opc opc     4096 Jun  3 07:45 .
+drwxrwxr-x. 6 opc opc     4096 Jun  3 07:45 ..
+-rw-rw-r--. 1 opc opc 13505055 Jun  3 07:45 coherence.jar
+drwxrwxr-x. 2 opc opc       69 Jun  3 07:45 cohOverride
+drwxrwxr-x. 3 opc opc       40 Jun  3 07:45 javaCode
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myApp.ear
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myCache.gar
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedApp.ear
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedCache.gar
+drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedCacheProxy.gar
 ```
 Now we go to directory myCache.gar and make sure the directory structure like this:
 ```
