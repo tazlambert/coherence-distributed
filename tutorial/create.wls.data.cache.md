@@ -1,4 +1,4 @@
-# How to Configure WebLogic-Coherence Cluster to Store Data Cache
+# How to Configure WebLogic-Coherence Cluster for Replicated/Distributed Cache
 
 ## Pre-requisite
 
