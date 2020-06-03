@@ -24,6 +24,26 @@ drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedApp.ear
 drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedCache.gar
 drwxrwxr-x. 3 opc opc       22 Jun  3 07:45 myFedCacheProxy.gar
 ```
-### Create .gar file
+### Create .gar file for Data Cache
 
-Go to directory myFedCache.gar and do the same steps like in the [Step 1](create.data.gar.md)
+Go to directory myFedCache.gar and do the same steps like in the [Step 1](create.data.gar.md) use the configuration for the [federated cache](https://github.com/tazlambert/coherence-weblogic/blob/master/tutorial/create.data.gar.md#federated-cache). A little different part is to create **different .gar filename** for the .gar files, when we package into .gar we type this command inside myFedCache.gar directory:
+```
+jar cvf myFedCache.gar *
+```
+### Create .ear file for Web Application
+
+Go to directory myFedApp.ear and do the same steps like in the [Step 3](create.ear.md) and pay attention on **different .gar filename** but **same .war filename** and when we want to create .ear file we use different filename in the directory myFedApp.ear:
+```
+jar cvf myFedApp.ear *
+```
+### Create .gar file for Proxy Cache
+
+Go to directory myFedCacheProxy.gar and do the same steps like in the [Step 2](create.proxy.gar.md) use the configuration for the [federated cache](https://github.com/tazlambert/coherence-weblogic/blob/master/tutorial/create.proxy.gar.md#federated-cache).A little different part is to create **different .gar filename** for the .gar files, when we package into .gar we type this command inside myFedCacheProxy.gar directory:
+```
+jar cvf myFedCacheProxy.gar *
+```
+
+### Setting Up the WebLogic
+
+For the federated cache labs we need to create another Coherence cluster, WebLogic cluster, as if these cluster are hosted in the different environment, since the purpose of federated the Coherence is to create setup for DC-DRC or separated geographically cluster. In this case the new created cluster will be deployed with [.gar for Proxy cache]() So now we need to create 2 new managed server first.
+
