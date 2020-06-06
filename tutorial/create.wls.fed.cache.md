@@ -67,4 +67,18 @@ After that we need to deploy all three file that created before: myFedCache.gar,
 
 ### Setting Up the Coherence federated cluster
 
-After the Coherence cluster already setup then we need to configure the federation part, now go the demoCohCluster
+After the Coherence cluster already setup then we need to configure the federation part, now go to the demoCohCluster and choose tab Federation and do the configuration like below:
+
+![alt text](images/CohFed08.jpg)
+
+Then next is to go to the demoCohCluster2 and choose tab Federation and do the configuration like below:
+
+![alt text](images/CohFed09.jpg)
+
+Then we can test the Coherence cluster from the web application like below:
+
+![alt text](images/CohFed10.jpg)
+
+Now we need to test the data that already inside demoCohCluster from demoCohCluster2, and demoCohCLuster2 is configured with extendedProxy that makes the data in the cache can be accessed with the client that is not a member of the Federated Cache Cluster. So we will simple java code to access it, the java code is availbe inside artifacts directory of this git repo.
+
+
