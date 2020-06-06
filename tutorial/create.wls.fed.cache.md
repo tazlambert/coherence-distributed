@@ -61,8 +61,10 @@ So now we have to different Coherence cluster and if we use cache scheme Replica
 
 ![alt text](images/CohFed06.jpg)
 
-After that we need to deploy all three file that created before: myFedCache.gar, myFedApp.ear, myFedCacheProxy.gar into the respective cluster.
+After that we need to deploy all three file that created before: myFedCache.gar, myFedApp.ear, myFedCacheProxy.gar into the respective cluster and after finish installing them do not forget to activate them in the tonrol tab.
+
+![alt text](images/CohFed07.jpg)
 
 ### Setting Up the Coherence federated cluster
 
-After the Coherence cluster already setup then we need to configure the federation part
+After the Coherence cluster already setup then we need to configure the federation part, now go the demoCohCluster
